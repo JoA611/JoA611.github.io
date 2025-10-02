@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Rubik+Mono+One&family=Sono:wght@200..800&display=swap');
+
+/* || General setup */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  background-color: #000000;
+}
+
+body {
+  width: 100%;
+  min-width: 800px;
+  margin: 0 auto;
+  padding-top: 20px;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.spacer {
+  height: 50px;
+}
+
+.spacer-wide {
+  height: 100px;
+}
+
+/* || Typography */
+
+h1, h2, h3, li {
+  font-family: 'Poppins', sans-serif;
+  line-height: 0.5;
+  color: #ffffff;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  color: #909090;
+}
+
+/* || Header Layout */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12rem;
+  padding: 2rem;
+  margin-top: 5rem;
+  background-color: black;
+  color: white;
+}
+
+main, header, nav, article, aside, footer, section {
+  padding: 1%;
+}
+
+.hero-img img {
+  max-width: 400px;
+  height: auto;
+  display: block;
+}
+
+.hero-text h1 {
+  text-align: right;
+  font-size: 6.5rem;
+  font-weight: 700;
+  margin: 1;
+}
+
+.hero-text h2 {
+  text-align: right;
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 1;
+}
+
+.hero-text p {
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin: 1;
+}
+
+/* || Navbar Layout */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  width: 95%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  padding: 4rem;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* || About Section Layout */
+
+.about {
+  text-align: center;
+  padding: 40px 0 40px 0;
+  transition: transform 1.0s ease;
+}
+
+.about:hover {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+.about h2 {
+  font-size: 3.5rem;
+  margin: 5rem;
+}
+
+.about p {
+  font-size: 2rem;
+  max-width: 800px;
+  margin: 1rem auto;
+  line-height: 1.6;
+}
+
+button {
+  width: 250px;
+  height: 50px;
+  border-radius: 16px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #d0d0d0;
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+button:active {
+  -ms-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+/* || Services Section Layout */
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.services h2 {
+  text-align: center;
+  line-height: 1;
+  font-size: 2.5rem;
+}
+
+.services h3 {
+  text-align: center;
+  line-height: 1;
+  font-size: 4rem;
+  margin: 4rem;
+}
+
+.services-card {
+  margin: 5px;
+  padding: 5px;
+  width: 375px;
+  border-radius: 16px;
+}
+
+.services-imgframe {
+  height: 500px;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.services-imgframe img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 1.0s ease;
+}
+
+.services-imgframe:hover img {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.details {
+  padding: 32px 16px 32px 16px;
+}
+
+.icon {
+  color: #ffffff;
+  font-size: 3rem;
+  text-align: center;
+  padding: 8px;
+}
+
+.services-card p {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.skilltitle {
+  text-align: center;
+  margin-right: 100px;
+}
+
+.skillset {
+  width: 35%;
+  margin: 20px;
+}
+
+.skills {
+  transition: transform 0.5s ease;
+}
+
+.skills:hover {
+  -ms-transform: scale(1.025);
+  -webkit-transform: scale(1.025);
+  transform: scale(1.025);
+}
+
+.skills p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.skillbar {
+  background: #333333;
+  margin: 10px auto;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skillbar div {
+  height: 100%;
+  background: #60E67E;
+}
+
+/* || Projects Layout */
+
+.projects {
+  display: grid;
+  place-items: center;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 4rem;
+  line-height: 0;
+}
+
+.projects-card {
+  display: grid;
+  place-items: center;
+  padding: 5px;
+  border-radius: 16px;
+  transition: transform 1.0s ease;
+}
+
+.projects-card:hover {
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.projects-card img {
+  height: 380px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  transition-property: height;
+  transition-duration: 1s;
+}
+
+.projects-card img:hover {
+  height: 440px;
+}
+
+.project-desc {
+  width: 800px;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+/* || Contact Layout */
+
+.contact {
+  text-align: center;
+}
+
+.info {
+  display: grid;
+  place-items: center;
+  padding: 40px;
+}
+
+.info img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 1.0s ease;
+}
+
+.info img:hover {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.info h2 {
+  text-align: center;
+  line-height: 1;
+  font-size: 4rem;
+}
+
+.info p {
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* || Footer Layout */
+
+.footer {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 20px 0 40px 0;
+}
+
+.footer p {
+  line-height: 2;
+}
+
+.social-icons a {
+  display: inline-block;
+  background: #1a1a1a;
+  color: #cccccc;
+  margin: 10px 5px 10px 5px;
+  padding: 10px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1;
+}
