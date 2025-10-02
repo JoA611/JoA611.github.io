@@ -17,10 +17,19 @@ body {
   min-width: 800px;
   margin: 0 auto;
   padding-top: 20px;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.spacer {
+  height: 50px;
+}
+
+.spacer-wide {
+  height: 100px;
 }
 
 /* || Typography */
@@ -112,7 +121,14 @@ main, header, nav, article, aside, footer, section {
 
 .about {
   text-align: center;
-  padding-bottom: 60px;
+  padding: 40px 0 40px 0;
+  transition: transform 1.0s ease;
+}
+
+.about:hover {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .about h2 {
@@ -127,20 +143,39 @@ main, header, nav, article, aside, footer, section {
   line-height: 1.6;
 }
 
+button {
+  width: 250px;
+  height: 50px;
+  border-radius: 16px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #d0d0d0;
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+button:active {
+  -ms-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
 /* || Services Section Layout */
 
-.services, .projects {
+.services {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 20px;
 }
 
 .services h2 {
   text-align: center;
   line-height: 1;
   font-size: 2.5rem;
-  margin: 4rem;
 }
 
 .services h3 {
@@ -157,24 +192,42 @@ main, header, nav, article, aside, footer, section {
   border-radius: 16px;
 }
 
-.services-card img {
+.services-imgframe {
   height: 500px;
   width: 100%;
-  object-fit: cover;
   border-radius: 24px;
+  overflow: hidden;
+  position: relative;
 }
 
-.services-card:hover {
-  -ms-transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
+.services-imgframe img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 1.0s ease;
+}
+
+.services-imgframe:hover img {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.details {
+  padding: 32px 16px 32px 16px;
+}
+
+.icon {
+  color: #ffffff;
+  font-size: 3rem;
+  text-align: center;
+  padding: 8px;
 }
 
 .services-card p {
   text-align: center;
   font-size: 1.5rem;
   line-height: 2;
-  padding: 0 20px 20px 20px;
 }
 
 .skilltitle {
@@ -182,9 +235,19 @@ main, header, nav, article, aside, footer, section {
   margin-right: 100px;
 }
 
-.skills {
+.skillset {
   width: 35%;
   margin: 20px;
+}
+
+.skills {
+  transition: transform 0.5s ease;
+}
+
+.skills:hover {
+  -ms-transform: scale(1.025);
+  -webkit-transform: scale(1.025);
+  transform: scale(1.025);
 }
 
 .skills p {
@@ -210,21 +273,33 @@ main, header, nav, article, aside, footer, section {
 
 /* || Projects Layout */
 
+.projects {
+  display: grid;
+  place-items: center;
+}
+
 .projects h2 {
   text-align: center;
-  line-height: 1;
   font-size: 4rem;
+  line-height: 0;
 }
 
 .projects-card {
-  margin: 5px 0px 80px 0px;
+  display: grid;
+  place-items: center;
   padding: 5px;
-  width: 900px;
   border-radius: 16px;
+  transition: transform 1.0s ease;
+}
+
+.projects-card:hover {
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .projects-card img {
-  height: 420px;
+  height: 380px;
   width: 100%;
   object-fit: cover;
   border-radius: 24px;
@@ -233,25 +308,26 @@ main, header, nav, article, aside, footer, section {
 }
 
 .projects-card img:hover {
-  height: 500px;
+  height: 440px;
 }
 
-.projects-card p {
+.project-desc {
+  width: 800px;
   text-align: center;
   font-size: 1.5rem;
   line-height: 2;
-  padding: 0 20px 20px 20px;
 }
 
 /* || Contact Layout */
 
 .contact {
   text-align: center;
-  padding-bottom: 100px;
 }
 
 .info {
-  margin-bottom: 80px;
+  display: grid;
+  place-items: center;
+  padding: 40px;
 }
 
 .info img {
@@ -259,10 +335,12 @@ main, header, nav, article, aside, footer, section {
   height: 250px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 2rem;
+  transition: transform 1.0s ease;
 }
 
 .info img:hover {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
 
@@ -279,90 +357,25 @@ main, header, nav, article, aside, footer, section {
 
 /* || Footer Layout */
 
-footer {
-  padding-top: 40px;
-  padding-bottom: 60px;
+.footer {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 20px 0 40px 0;
 }
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.footer-left,
-.footer-middle,
-.footer-right {
-  flex: 1 1 300px;
-  margin: 10px;
-}
-
-.footer-left p {
-  font-size: 1.25rem;
-  font-weight: 100;
+.footer p {
   line-height: 2;
-  color: #cccccc;
 }
 
 .social-icons a {
   display: inline-block;
   background: #1a1a1a;
   color: #cccccc;
-  margin: 10px 10px 0 0;
+  margin: 10px 5px 10px 5px;
   padding: 10px;
   border-radius: 50%;
   text-decoration: none;
   font-size: 16px;
-}
-
-.footer-middle ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-middle ul li {
-  margin: 8px 0;
-}
-
-.footer-middle ul li a {
-  color: #cccccc;
-  text-decoration: none;
-  font-size: 1.25rem;
-  font-family: 'Inter', sans-serif;
-  font-weight: 100;
-  line-height: 1.25;
-}
-
-.footer-right h4 {
-  margin-bottom: 10px;
-}
-
-.subscribe-form {
-  display: flex;
-  background: #1a1a1a;
-  border-radius: 8px;
-  overflow: hidden;
-  align-items: center;
-}
-
-.subscribe-form input {
-  flex: 1;
-  padding: 10px;
-  border: none;
-  background: transparent;
-  color: #ffffff;
-}
-
-.subscribe-form input::placeholder {
-  color: #cccccc;
-}
-
-.subscribe-form button {
-  background: transparent;
-  border: none;
-  padding: 10px;
-  color: #cccccc;
-  cursor: pointer;
+  line-height: 1;
 }
